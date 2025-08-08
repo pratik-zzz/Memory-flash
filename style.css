@@ -86,16 +86,29 @@ h1 {
 	background-color: rgb(50, 200, 50);
 }
 
+#press-space {	
+	display: none;
+}
+
 @media (min-width: 900px) {
 
 	body {
 		padding-top: 3vw;
 	}
 
+	#start-btn {
+		display: none;
+	}	
+
 	h1 {
 		font-size: 1.5vw;
 	}
 	
+	#press-space {	
+		display: block;
+		font-size: 1.5vw;
+	}
+
 	#high-score {
 		text-align: left;
 		margin-left: 10vw;

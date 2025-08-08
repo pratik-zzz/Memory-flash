@@ -2,6 +2,8 @@ let gameStarted = false
 let scoreEl = document.querySelector("#score")
 let highScoreEl = document.querySelector("#high-score")
 let userTurn = false
+let startBtnEl = document.querySelector("#start-btn")
+let pressSpaceEl = document.querySelector("#press-space") 
 
 const colors = ['red', 'yellow', 'blue', 'green']
 let compSeq = []
@@ -93,7 +95,8 @@ function levelUp() {
 }
 
 function gameOver() {
-    scoreEl.textContent = "Press the SPACE key to restart game"
+    pressSpaceEl.style.display = "block"
+    pressSpaceEl.textContent = "Press the SPACE key to restart game"
 }
 
 document.addEventListener("keydown", (event) => {
@@ -102,10 +105,16 @@ document.addEventListener("keydown", (event) => {
     }
 })
 
+startBtnEl.addEventListener("click", () => {
+    startGame()
+})
+
 function startGame() {
     if (gameStarted === false) {
         gameStarted = true
-        
+        pressSpaceEl.style.display = "none"
+        startBtnEl.style.display = "none"
+
         score = 0
         compSeq = []
     
