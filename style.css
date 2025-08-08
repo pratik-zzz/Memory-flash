@@ -1,0 +1,150 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	padding-top: 10vw;
+	height: 100vh;
+	background-repeat: no-repeat;
+	text-align: center;
+	font-family: "Courier New", Courier, monospace;
+	color: rgba(255, 255, 255, 0.798);
+	background: 
+		radial-gradient(at top left, rgb(50, 0, 0), transparent 100%),
+		radial-gradient(at top right, rgb(50, 50, 0), transparent 100%),
+		radial-gradient(at bottom left, rgb(0, 50, 0), transparent 100%),
+		radial-gradient(at bottom right, rgb(0, 0, 50), transparent 100%);
+	background-blend-mode: multiply;
+}
+
+h1 {
+	font-size: 3vw;
+}
+
+#high-score {
+	text-align: left;
+	margin-top: 2vh;
+	margin-left: 10vw;
+	font-size: 2vw;
+}
+
+#score {
+	font-size: 3vw;
+	margin-top: 5vh;
+}
+
+#tiles-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 5vh;
+	gap: 3vw;
+}
+
+.tile {
+	margin-top: 2vh;
+	width: 30vw;
+	height: 30vw;
+	max-width: 800px;
+	max-height: 800px;
+	border-radius: 5vw;
+	border: none;
+}
+
+.glow {
+	transform: scale(1.1);
+	box-shadow: rgb(2, 2, 2) 0 0 2vw;
+}
+
+.flash {
+	background-color: white !important;
+}
+
+.flashRed {
+	background-color: red !important;
+}
+
+.flashGreen {
+	background-color: green !important;
+}
+
+#red {
+	background-color: rgb(200, 50, 50);
+}
+
+#yellow {
+	background-color: rgb(200, 200, 50);
+}
+
+#blue {
+	background-color: rgb(50, 50, 200);
+}
+
+#green {
+	background-color: rgb(50, 200, 50);
+}
+
+@media (min-width: 900px) {
+
+	body {
+		padding-top: 3vw;
+	}
+
+	h1 {
+		font-size: 1.5vw;
+	}
+	
+	#high-score {
+		text-align: left;
+		margin-left: 10vw;
+		font-size: 1.5vw;
+	}
+	
+	#score {
+		font-size: 2vw;
+	}
+	
+	#tiles-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-top: 5vh;
+		gap: 2vw;
+	}
+
+	@media (min-width: 900px) {
+		body {
+			padding-top: 3vw;
+		}
+	
+		h1 {
+			font-size: 1.5vw;
+		}
+		
+		#high-score {
+			text-align: left;
+			margin-left: 10vw;
+			font-size: 1.2vw;
+		}
+		
+		#score {
+			font-size: 1.5vw;
+		}
+		
+		#tiles-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-top: 5vh;
+			gap: 1.5vw;
+		}
+	
+		.tile {
+			width: clamp(120px, 25vw, 180px);
+			height: clamp(120px, 25vw, 180px);
+			border-radius: 2vw;
+		}
+	}	
+}

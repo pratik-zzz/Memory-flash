@@ -1,0 +1,16 @@
+Simon Says Game Logic
+
+1. Game starts when any key is pressed
+2. Flash colors in compSeq. Flash an extra random color
+    1. Add the extra color to compSeq
+3. User presses buttons
+    1. Flash them as they are pressed
+    2. Add the colors to userSeq
+4. Check whether the color is correct
+    1. Check whether userSeq === compSeq after every button press
+5. If correct:
+    1. Level up
+    2. Go to 2
+    3. Clear UserSeq
+6. Else, Game Over
+    1. Set gameStarted = False
