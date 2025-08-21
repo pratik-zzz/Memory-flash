@@ -6,17 +6,37 @@ let startBtnEl = document.querySelector("#start-btn")
 let pressSpaceEl = document.querySelector("#press-space") 
 
 const colors = ['red', 'yellow', 'blue', 'green']
-let compSeq = []
+let compSeq = []	
 let score = 0;
 let pressCount = 0;
 let highScore = 0;
 
 function btnFlash(color) {
     let btnEl = document.querySelector(`#${color}`)
-    btnEl.classList.add("flash")
-    setTimeout(() => {
-        btnEl.classList.remove("flash")
-    }, 200)
+    let flashDuration = 200
+    if (color === "red") {
+        btnEl.classList.add("flashRed")
+        setTimeout(() => {
+            btnEl.classList.remove("flashRed")
+        }, flashDuration)
+    } else if (color === "yellow") {
+        btnEl.classList.add("flashYellow")
+        setTimeout(() => {
+            btnEl.classList.remove("flashYellow")
+        }, flashDuration)
+    } else if (color === "green") {
+        btnEl.classList.add("flashGreen")
+        setTimeout(() => {
+            btnEl.classList.remove("flashGreen")
+        }, flashDuration)
+    } else if (color === "blue") {
+        btnEl.classList.add("flashBlue")
+        setTimeout(() => {
+            btnEl.classList.remove("flashBlue")
+        }, flashDuration)
+    } else {
+        console.log("Invalid color.")
+    }
 }
 
 function btnFlashRed(color) {
@@ -72,7 +92,7 @@ function checkAccuracy(event) {
                 highScore = score
                 highScoreEl.textContent = "High Score: " + highScore;
                 gameStarted = false
-                setTimeout(gameOver, 3000)
+                gameOver()
                 scoreEl.textContent = `Game Over! Score: ${score}` 
             }
         }  
@@ -95,9 +115,18 @@ function levelUp() {
 }
 
 function gameOver() {
-    pressSpaceEl.style.display = "block"
-    pressSpaceEl.textContent = "Press the SPACE key to restart game"
+    if (window.innerWidth <= 900) {
+        startBtnEl.style.display = "block"
+    } else {
+        pressSpaceEl.textContent = "Game Over! Press the SPACE key to restart game"
+        pressSpaceEl.style.display = "block"
+    }
 }
+
+setInterval(() => {
+    scoreEl.textContent = `Score: ${score}`
+    highScoreEl.textContent = `High Score: ${highScore}`
+}, 100)
 
 document.addEventListener("keydown", (event) => {
     if (event.code === "Space") {
