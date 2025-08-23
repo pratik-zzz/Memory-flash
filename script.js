@@ -47,11 +47,11 @@ function btnFlashRed(color) {
     }, 200)
 }
 
-function glow(color) {
+function enlarge(color) {
     let btnEl = document.querySelector(`#${color}`)
-    btnEl.classList.add("glow")
+    btnEl.classList.add("enlarge")
     setTimeout(() => {
-        btnEl.classList.remove("glow")
+        btnEl.classList.remove("enlarge")
     }, 3000)
 }
 
@@ -76,6 +76,7 @@ function compFlash() {
 function checkAccuracy(event) {
     let tileEl = event.currentTarget;
     let color = tileEl.id
+    console.log(color)
 	if (!gameStarted) return;
     if (userTurn) {
         btnFlash(color)
@@ -88,12 +89,11 @@ function checkAccuracy(event) {
             } else {
                 btnFlashRed(color)
                 let correctColor = compSeq[pressCount]
-                glow(correctColor)
+                enlarge(correctColor)
                 highScore = score
                 highScoreEl.textContent = "High Score: " + highScore;
                 gameStarted = false
                 gameOver()
-                scoreEl.textContent = `Game Over! Score: ${score}` 
             }
         }  
     }
@@ -116,10 +116,10 @@ function levelUp() {
 
 function gameOver() {
     if (window.innerWidth <= 900) {
-        startBtnEl.style.display = "block"
+        startBtnEl.style.visibility = "visible"
     } else {
         pressSpaceEl.textContent = "Game Over! Press the SPACE key to restart game"
-        pressSpaceEl.style.display = "block"
+        pressSpaceEl.style.visibility = "visible"
     }
 }
 
@@ -140,10 +140,12 @@ startBtnEl.addEventListener("click", () => {
 
 function startGame() {
     if (gameStarted === false) {
-        gameStarted = true
-        pressSpaceEl.style.display = "none"
-        startBtnEl.style.display = "none"
 
+        gameStarted = true
+        pressSpaceEl.style.visibility = "hidden"
+        startBtnEl.style.visibility = "hidden"
+
+        pressCount = 0
         score = 0
         compSeq = []
     

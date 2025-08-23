@@ -42,6 +42,15 @@ h1 {
 	color: rgba(255, 255, 255, 0.5);
 }
 
+#start-btn {
+	font-size: 2vh;
+	color: rgba(255, 255, 255, 0.8);
+	background-color: rgb(61, 61, 61);
+	padding: 0.6vh 1.2vh;
+	border-radius: 5px;
+	border: none;
+}
+
 #tiles-container {
 	display: flex;
 	flex-wrap: wrap;
@@ -60,50 +69,51 @@ h1 {
 	border: none;
 }
 
-.glow {
-	transform: scale(1.1);
+.enlarge {
+	transform: scale(1.2);
 	box-shadow: rgb(2, 2, 2) 0 0 2vw;
+	filter: brightness(1.);
 }
 
 .flashRed {
 	background-image: none !important;
 	background-color: rgb(250, 100, 100) !important;
-	box-shadow: rgb(250, 100, 100) 0 0 1vw;
+	box-shadow: rgb(250, 100, 100) 0 0 1.5vw;
 }
 
 .flashYellow {
 	background-image: none !important;
 	background-color: rgb(250, 250, 100) !important;
-	box-shadow: rgb(250, 250, 100) 0 0 1vw;
+	box-shadow: rgb(250, 250, 100) 0 0 1.5vw;
 }
 
 .flashGreen {
 	background-image: none !important;
 	background-color: rgb(100, 250, 100) !important;
-	box-shadow: rgb(100, 250, 100) 0 0 1vw;
+	box-shadow: rgb(100, 250, 100) 0 0 1.5vw;
 }
 
 .flashBlue {
 	background-image: none !important;
 	background-color: rgb(100, 100, 250) !important;
-	box-shadow: rgb(100, 100, 250) 0 0 1vw;
+	box-shadow: rgb(100, 100, 250) 0 0 1.5vw;
 }
 
 
 #red {
-	background-image: linear-gradient(to bottom right, rgb(200, 50, 50), rgb(180, 30, 30));
+	background-image: linear-gradient(to bottom right, rgb(200, 50, 50), rgb(170, 20, 20));
 }
 
 #yellow {
-	background-image: linear-gradient(to bottom right, rgb(200, 200, 50), rgb(180, 180, 30));
+	background-image: linear-gradient(to bottom right, rgb(200, 200, 50), rgb(170, 170, 20));
 }
 
 #green {
-	background-image: linear-gradient(to bottom right, rgb(50, 200, 50), rgb(30, 180, 30));
+	background-image: linear-gradient(to bottom right, rgb(50, 200, 50), rgb(20, 170, 20));
 }
 
 #blue {
-	background-image: linear-gradient(to bottom right, rgb(50, 50, 200), rgb(30, 30, 180));
+	background-image: linear-gradient(to bottom right, rgb(50, 50, 200), rgb(20, 20, 170));
 }
 
 #press-space {	
