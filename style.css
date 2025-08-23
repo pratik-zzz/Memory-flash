@@ -20,7 +20,7 @@ body {
 }
 
 h1 {
-	font-size: 1vw;
+	font-size: 1.5vw;
 	color: rgba(255, 255, 255, 0.3);
 }
 
@@ -28,12 +28,12 @@ h1 {
 	text-align: left;
 	margin-top: 2vh;
 	margin-left: 10vw;
-	font-size: 2vw;
+	font-size: 2.5vw;
 	color: rgba(255, 255, 255, 0.5);
 }
 
 #score {
-	font-size: 3vw;
+	font-size: 4vw;
 	margin-top: 5vh;
 	color: rgba(255, 255, 255, 0.5);
 }
