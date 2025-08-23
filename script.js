@@ -138,12 +138,15 @@ startBtnEl.addEventListener("click", () => {
     startGame()
 })
 
+scoreEl.style.visibility = "hidden"
+
 function startGame() {
     if (gameStarted === false) {
 
         gameStarted = true
         pressSpaceEl.style.visibility = "hidden"
         startBtnEl.style.visibility = "hidden"
+        scoreEl.style.visibility = "visible"
 
         pressCount = 0
         score = 0

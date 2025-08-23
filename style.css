@@ -142,11 +142,11 @@ h1 {
 	#high-score {
 		text-align: left;
 		margin-left: 10vw;
-		font-size: 1.5vw;
+		font-size: 1.3vw;
 	}
 	
 	#score {
-		font-size: 2vw;
+		font-size: 1.8vw;
 	}
 	
 	#tiles-container {
@@ -154,40 +154,12 @@ h1 {
 		flex-wrap: wrap;
 		justify-content: center;
 		margin-top: 5vh;
-		gap: 2vw;
+		gap: 1vw;
 	}
 
-	@media (min-width: 900px) {
-		body {
-			padding-top: 3vw;
-		}
-	
-		h1 {
-			font-size: 1vw;
-		}
-		
-		#high-score {
-			text-align: left;
-			margin-left: 10vw;
-			font-size: 1.2vw;
-		}
-		
-		#score {
-			font-size: 1.5vw;
-		}
-		
-		#tiles-container {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			margin-top: 5vh;
-			gap: 1.5vw;
-		}
-	
-		.tile {
-			width: clamp(120px, 25vw, 180px);
-			height: clamp(120px, 25vw, 180px);
-			border-radius: 2vw;
-		}
-	}	
+	.tile {
+		width: clamp(120px, 25vw, 220px);
+		height: clamp(120px, 25vw, 220px);
+		border-radius: 2vw;
+	}
 }
