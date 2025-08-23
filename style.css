@@ -101,19 +101,19 @@ h1 {
 
 
 #red {
-	background-image: linear-gradient(to bottom right, rgb(200, 50, 50), rgb(170, 20, 20));
+	background-image: linear-gradient(to bottom right, rgb(230, 80, 80), rgb(200, 50, 50));
 }
 
 #yellow {
-	background-image: linear-gradient(to bottom right, rgb(200, 200, 50), rgb(170, 170, 20));
+	background-image: linear-gradient(to bottom right, rgb(230, 230, 80), rgb(200, 200, 50));
 }
 
 #green {
-	background-image: linear-gradient(to bottom right, rgb(50, 200, 50), rgb(20, 170, 20));
+	background-image: linear-gradient(to bottom right, rgb(80, 230, 80), rgb(50, 200, 50));
 }
 
 #blue {
-	background-image: linear-gradient(to bottom right, rgb(50, 50, 200), rgb(20, 20, 170));
+	background-image: linear-gradient(to bottom right, rgb(80, 80, 230), rgb(50, 50, 200));
 }
 
 #press-space {	
@@ -161,6 +161,22 @@ h1 {
 		width: clamp(120px, 25vw, 220px);
 		height: clamp(120px, 25vw, 220px);
 		border-radius: 2vw;
+	}
+		
+	#red {
+		background-image: linear-gradient(to bottom right, rgb(200, 50, 50), rgb(170, 20, 20));
+	}
+
+	#yellow {
+		background-image: linear-gradient(to bottom right, rgb(200, 200, 50), rgb(170, 170, 20));
+	}
+
+	#green {
+		background-image: linear-gradient(to bottom right, rgb(50, 200, 50), rgb(20, 170, 20));
+	}
+
+	#blue {
+		background-image: linear-gradient(to bottom right, rgb(50, 50, 200), rgb(20, 20, 170));
 	}
 
 	.flashRed {
