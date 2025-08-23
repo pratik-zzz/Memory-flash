@@ -5,7 +5,7 @@ let userTurn = false
 let startBtnEl = document.querySelector("#start-btn")
 let pressSpaceEl = document.querySelector("#press-space") 
 
-const colors = ['red', 'yellow', 'blue', 'green']
+const colors = ['red', 'green', 'blue', 'purple']
 let compSeq = []	
 let score = 0;
 let pressCount = 0;
@@ -19,10 +19,10 @@ function btnFlash(color) {
         setTimeout(() => {
             btnEl.classList.remove("flashRed")
         }, flashDuration)
-    } else if (color === "yellow") {
-        btnEl.classList.add("flashYellow")
+    } else if (color === "purple") {
+        btnEl.classList.add("flashPurple")
         setTimeout(() => {
-            btnEl.classList.remove("flashYellow")
+            btnEl.classList.remove("flashPurple")
         }, flashDuration)
     } else if (color === "green") {
         btnEl.classList.add("flashGreen")
