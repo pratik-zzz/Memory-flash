@@ -77,43 +77,42 @@ h1 {
 
 .flashRed {
 	background-image: none !important;
-	background-color: hsl(0, 100%, 70%) !important;
-	box-shadow: hsl(0, 100%, 70%) 0 0 4vw;
+	background-color: hsl(0, 100%, 50%) !important;
+	box-shadow: hsl(0, 100%, 50%) 0 0 4vw;
+}
+
+.flashYellow {
+	background-image: none !important;
+	background-color: hsl(60, 100%, 50%) !important;
+	box-shadow: hsl(60, 100%, 50%) 0 0 4vw;
 }
 
 .flashGreen {
 	background-image: none !important;
-	background-color: hsl(90, 100%, 70%) !important;
-	box-shadow: hsl(90, 100%, 70%) 0 0 4vw;
+	background-color: hsl(120, 100%, 50%) !important;
+	box-shadow: hsl(120, 100%, 50%) 0 0 4vw;
 }
 
 .flashBlue {
 	background-image: none !important;
-	background-color: hsl(180, 100%, 70%) !important;
-	box-shadow: hsl(180, 100%, 70%) 0 0 4vw;
+	background-color: hsl(180, 100%, 50%) !important;
+	box-shadow: hsl(180, 100%, 50%) 0 0 4vw;
 }
-
-.flashPurple {
-	background-image: none !important;
-	background-color: hsl(270, 100%, 70%) !important;
-	box-shadow: hsl(270, 100%, 70%) 0 0 4vw;
-}
-
 
 #red {
 	background-image: linear-gradient(to bottom right, hsl(0, 100%, 50%)); 
 }
 
+#yellow {
+	background-image: linear-gradient(to bottom right, hsl(60, 100%, 50%));
+}
+
 #green {
-	background-image: linear-gradient(to bottom right, hsl(90, 100%, 50%));
+	background-image: linear-gradient(to bottom right, hsl(120, 100%, 50%));
 }
 
 #blue {
 	background-image: linear-gradient(to bottom right, hsl(180, 100%, 50%));
-}
-
-#purple {
-	background-image: linear-gradient(to bottom right, hsl(270, 100%, 50%));
 }
 
 #press-space {	
@@ -164,18 +163,18 @@ h1 {
 	}
 
 	.flashRed {
-		box-shadow: hsl(0, 100%, 70%) 0 0 1.5vw;
+		box-shadow: hsl(0, 100%, 50%) 0 0 2vw;
+	}
+	
+	.flashYellow {
+		box-shadow: hsl(60, 100%, 50%) 0 0 2vw;
 	}
 	
 	.flashGreen {
-		box-shadow: hsl(90, 100%, 70%) 0 0 1.5vw;
+		box-shadow: hsl(120, 100%, 50%) 0 0 2vw;
 	}
 	
 	.flashBlue {
-		box-shadow: hsl(180, 100%, 70%) 0 0 1.5vw;
-	}
-	
-	.flashPurple {
-		box-shadow: hsl(270, 100%, 70%) 0 0 1.5vw;
+		box-shadow: hsl(180, 100%, 50%) 0 0 2vw;
 	}
 }
