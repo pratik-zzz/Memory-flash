@@ -35,7 +35,6 @@ function btnFlash(color) {
             btnEl.classList.remove("flashBlue")
         }, flashDuration)
     } else {
-        console.log("Invalid color.")
     }
 }
 
@@ -70,13 +69,11 @@ function compFlash() {
         userTurn = true 
     }, compSeq.length * delay)
     compSeq.push(randColor)
-    console.log(`compSeq: ${compSeq}`)
 }
 
 function checkAccuracy(event) {
     let tileEl = event.currentTarget;
     let color = tileEl.id
-    console.log(color)
 	if (!gameStarted) return;
     if (userTurn) {
         btnFlash(color)
