@@ -77,26 +77,26 @@ h1 {
 
 .flashRed {
 	background-image: none !important;
-	background-color: hsl(0, 100%, 50%) !important;
-	box-shadow: hsl(0, 100%, 50%) 0 0 6vw;
+	background-color: hsl(0, 100%, 70%) !important;
+	box-shadow: hsl(0, 100%, 70%) 0 0 6vw;
 }
 
 .flashYellow {
 	background-image: none !important;
-	background-color: hsl(60, 100%, 50%) !important;
-	box-shadow: hsl(60, 100%, 50%) 0 0 6vw;
+	background-color: hsl(60, 100%, 70%) !important;
+	box-shadow: hsl(60, 100%, 70%) 0 0 6vw;
 }
 
 .flashGreen {
 	background-image: none !important;
-	background-color: hsl(120, 100%, 50%) !important;
-	box-shadow: hsl(120, 100%, 50%) 0 0 6vw;
+	background-color: hsl(120, 100%, 70%) !important;
+	box-shadow: hsl(120, 100%, 70%) 0 0 6vw;
 }
 
 .flashBlue {
 	background-image: none !important;
-	background-color: hsl(180, 100%, 50%) !important;
-	box-shadow: hsl(180, 100%, 50%) 0 0 6vw;
+	background-color: hsl(180, 100%, 70%) !important;
+	box-shadow: hsl(180, 100%, 70%) 0 0 6vw;
 }
 
 #red {
