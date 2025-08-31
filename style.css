@@ -26,7 +26,7 @@ body {
 }
 
 h1 {
-	font-size: 1vw;
+	font-size: 2vw;
 	color: rgba(255, 255, 255, 0.3);
 }
 
@@ -178,7 +178,7 @@ h1 {
 	}	
 
 	h1 {
-		font-size: 1vw;
+		font-size: 1.5vw;
 	}
 
 	#how-to-btn {
