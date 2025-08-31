@@ -73,14 +73,14 @@ h1 {
 
 #high-score {
 	text-align: left;
-	margin-top: 2vh;
+	margin-top: 3vh;
 	margin-left: 10vw;
 	font-size: 2vw;
 	color: rgba(255, 255, 255, 0.5);
 }
 
 #score {
-	font-size: 3vw;
+	font-size: 4vw;
 	margin-top: 5vh;
 	color: rgba(255, 255, 255, 0.5);
 }
@@ -90,7 +90,7 @@ h1 {
 }
 
 #start-btn {
-	font-size: 2vh;
+	font-size: 3vh;
 	color: rgba(255, 255, 255, 0.8);
 	background-color: rgb(61, 61, 61);
 	padding: 0.6vh 1.2vh;
