@@ -7,9 +7,22 @@
 		<title>Simon Says</title>
 	</head>
 	<body>
-		<h1>
-			Simon Says
-		</h1>
+		<div id="how-to-page">
+			<p>How to play</p>
+			<p>1. The computer randomly flashes tiles of different colors in a sequence.</p>
+			<p>2. You need to flash (click) the tiles in the same sequence as the computer. </p>
+			<p>3. If you match the sequence correctly, your score increases, and the computer flashes a new, longer sequence.</p>
+			<p>4. If you make a mistake, your score resets to 0 and the game starts over.</p>
+			<p>5. The game does not end, it's all about how far you can go. Enjoy!</p>
+		</div>
+		<div id="container-how-to-h1">
+			<h1>
+				Simon Says
+			</h1>
+			<div id="how-to-btn">
+				<p>?</p>
+			</div>
+		</div>
 		<p id="high-score">High Score: 0</p>
 		<p id="press-space">
 			Press the SPACE key to start the game
@@ -19,10 +32,10 @@
 		<div id="tiles-container">
 			<div>
 				<div class="tile red" id="red"></div>
-				<div class="tile yellow" id="yellow"></div>
+				<div class="tile green" id="green"></div>
 			</div>
 			<div>
-				<div class="tile green" id="green"></div>
+				<div class="tile yellow" id="yellow"></div>
 				<div class="tile blue" id="blue"></div>
 			</div>
 		</div>

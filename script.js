@@ -4,8 +4,12 @@ let highScoreEl = document.querySelector("#high-score")
 let userTurn = false
 let startBtnEl = document.querySelector("#start-btn")
 let pressSpaceEl = document.querySelector("#press-space") 
+let howToPageEl = document.querySelector("#how-to-page")
+let howToBtnEl = document.querySelector("#how-to-btn")
+let tilesContainerEl = document.querySelector("#tiles-container")
+let isHowToOn = false
 
-const colors = ['red', 'green', 'blue', 'yellow']
+const colors = ['red', 'yellow', 'blue', 'green']
 let compSeq = []	
 let score = 0;
 let pressCount = 0;
@@ -35,6 +39,7 @@ function btnFlash(color) {
             btnEl.classList.remove("flashBlue")
         }, flashDuration)
     } else {
+        console.log("Invalid color.")
     }
 }
 
@@ -51,7 +56,7 @@ function enlarge(color) {
     btnEl.classList.add("enlarge")
     setTimeout(() => {
         btnEl.classList.remove("enlarge")
-    }, 2000)
+    }, 3000)
 }
 
 function compFlash() {
@@ -69,11 +74,13 @@ function compFlash() {
         userTurn = true 
     }, compSeq.length * delay)
     compSeq.push(randColor)
+    console.log(`compSeq: ${compSeq}`)
 }
 
 function checkAccuracy(event) {
     let tileEl = event.currentTarget;
     let color = tileEl.id
+    console.log(color)
 	if (!gameStarted) return;
     if (userTurn) {
         btnFlash(color)
@@ -135,7 +142,27 @@ startBtnEl.addEventListener("click", () => {
     startGame()
 })
 
-scoreEl.style.visibility = "hidden"
+howToBtnEl.addEventListener("click", () => {
+    if (isHowToOn) {
+        isHowToOn = false
+        howToPageEl.style.visibility = "hidden"
+        howToBtnEl.firstElementChild.textContent = "?"
+        scoreEl.style.visibility = "visible"
+        highScoreEl.style.visibility = "visible"
+        startBtnEl.style.visibility = "visible"
+        pressSpaceEl.style.visibility = "visible"
+        tilesContainerEl.style.visibility = "visible"
+    } else {
+        isHowToOn = true
+        howToPageEl.style.visibility = "visible"
+        howToBtnEl.firstElementChild.textContent = "X"
+        scoreEl.style.visibility = "hidden"
+        highScoreEl.style.visibility = "hidden"
+        startBtnEl.style.visibility = "hidden"
+        pressSpaceEl.style.visibility = "hidden"
+        tilesContainerEl.style.visibility = "hidden"
+    }
+})
 
 function startGame() {
     if (gameStarted === false) {
@@ -143,7 +170,6 @@ function startGame() {
         gameStarted = true
         pressSpaceEl.style.visibility = "hidden"
         startBtnEl.style.visibility = "hidden"
-        scoreEl.style.visibility = "visible"
 
         pressCount = 0
         score = 0
