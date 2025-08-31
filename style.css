@@ -26,7 +26,7 @@ body {
 }
 
 h1 {
-	font-size: 2vw;
+	font-size: 3vw;
 	color: rgba(255, 255, 255, 0.3);
 }
 
@@ -37,12 +37,12 @@ h1 {
 	justify-content: center;
 	align-items: center;
 	margin-right: 4vw;
-	font-size: 85%;
+	font-size: 90%;
 	border: solid rgba(255, 255, 255, 0.5) 2px;
 	border-radius: 40%;
 	color: rgba(255, 255, 255, 0.5);
-	width: 6vw;
-	height: 6vw;
+	width: 7vw;
+	height: 7vw;
 	right: 3vw;
 	top: 0;
 }	
@@ -75,7 +75,7 @@ h1 {
 	text-align: left;
 	margin-top: 2vh;
 	margin-left: 10vw;
-	font-size: 3vw;
+	font-size: 4vw;
 	color: rgba(255, 255, 255, 0.5);
 }
 
