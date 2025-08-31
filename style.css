@@ -60,7 +60,6 @@ h1 {
 	width: 80vw;
 	border-radius: 5%;
 	text-align: start;
-	font-size: 120%;
 }
 
 #how-to-page p {
@@ -197,6 +196,7 @@ h1 {
 		width: 30vw;
 		border-radius: 5%;
 		padding: 4%;
+		font-size: 120%;
 	}
 
 	#how-to-page p {
