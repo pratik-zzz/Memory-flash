@@ -22,37 +22,11 @@ let highScore = 0;
 function btnFlash(color) {
     let btnEl = document.querySelector(`#${color}`)
     let flashDuration = 200
-    if (color === "red") {
-        btnEl.classList.add("flashRed")
-        setTimeout(() => {
-            btnEl.classList.remove("flashRed")
-        }, flashDuration)
-    } else if (color === "yellow") {
-        btnEl.classList.add("flashYellow")
-        setTimeout(() => {
-            btnEl.classList.remove("flashYellow")
-        }, flashDuration)
-    } else if (color === "green") {
-        btnEl.classList.add("flashGreen")
-        setTimeout(() => {
-            btnEl.classList.remove("flashGreen")
-        }, flashDuration)
-    } else if (color === "blue") {
-        btnEl.classList.add("flashBlue")
-        setTimeout(() => {
-            btnEl.classList.remove("flashBlue")
-        }, flashDuration)
-    } else {
-        console.log("Invalid color.")
-    }
-}
-
-function btnFlashRed(color) {
-    let btnEl = document.querySelector(`#${color}`)
-    btnEl.classList.add("flashRed")
+    let capitalizedColor = color.charAt(0).toUpperCase() + color.slice(1)
+    btnEl.classList.add(`flash${capitalizedColor}`)
     setTimeout(() => {
-        btnEl.classList.remove("flashRed")
-    }, 200)
+        btnEl.classList.remove(`flash${capitalizedColor}`)
+    }, flashDuration)
 }
 
 function enlarge(color) {
@@ -96,7 +70,6 @@ function checkAccuracy(event) {
                     levelUp()
                 }
             } else {
-                btnFlashRed(color)
                 let correctColor = compSeq[pressCount]
                 enlarge(correctColor)
                 highScore = score
@@ -127,6 +100,9 @@ function levelUp() {
 }
 
 function gameOver() {
+    if (navigator.vibrate) {
+        navigator.vibrate = 300
+    }
     howToBtnEl.style.visibility = "visible"
     if (window.innerWidth <= 900) {
         startBtnEl.style.visibility = "visible"
