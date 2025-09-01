@@ -9,6 +9,9 @@ let howToBtnEl = document.querySelector("#how-to-btn")
 let tilesContainerEl = document.querySelector("#tiles-container")
 let isHowToOn = false
 
+scoreEl.style.visibility = "hidden"
+highScoreEl.style.visibility = "hidden"
+
 const colors = ['red', 'yellow', 'blue', 'green']
 let compSeq = []	
 let score = 0;
@@ -172,6 +175,8 @@ function startGame() {
         pressSpaceEl.style.visibility = "hidden"
         startBtnEl.style.visibility = "hidden"
         howToBtnEl.style.visibility = "hidden"
+        scoreEl.style.visibility = "visible"
+        highScoreEl.style.visibility = "visible"
 
         pressCount = 0
         score = 0
