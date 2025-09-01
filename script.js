@@ -8,6 +8,7 @@ let howToPageEl = document.querySelector("#how-to-page")
 let howToBtnEl = document.querySelector("#how-to-btn")
 let tilesContainerEl = document.querySelector("#tiles-container")
 let isHowToOn = false
+let tileEls = document.querySelectorAll(".tile")
 
 scoreEl.style.visibility = "hidden"
 highScoreEl.style.visibility = "hidden"
@@ -75,6 +76,9 @@ function compFlash() {
     setTimeout(() => {
         btnFlash(randColor)
         userTurn = true 
+        for (let tileEl of tileEls) {
+            tileEl.classList.add("cursor-pointer")
+        }
     }, compSeq.length * delay)
     compSeq.push(randColor)
     console.log(`compSeq: ${compSeq}`)
@@ -116,6 +120,9 @@ function levelUp() {
     pressCount = 0
     scoreEl.textContent = `Score: ${score}`
     userTurn = false
+    for (let tileEl of tileEls) {
+        tileEl.classList.remove("cursor-pointer")
+    }
     setTimeout(() => {
         compFlash()
     }, 2000)
@@ -128,6 +135,9 @@ function gameOver() {
     } else {
         pressSpaceEl.textContent = "Game Over! Press the SPACE key to restart game"
         pressSpaceEl.style.visibility = "visible"
+    }
+    for (let tileEl of tileEls) {
+        tileEl.classList.remove("cursor-pointer")
     }
 }
 
@@ -183,6 +193,11 @@ function startGame() {
         compSeq = []
     
         scoreEl.textContent = `Score: ${score}`
+
+        for (let tileEl of tileEls) {
+            tileEl.classList.add("cursor-pointer")
+        }
+
         compFlash()
     }
 }
