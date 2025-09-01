@@ -115,6 +115,8 @@ h1 {
 	border-radius: 5vw;
 	border: none;
 	outline: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* removes blue/gray box on tap */
+    -webkit-focus-ring-color: transparent; /* extra safeguard for iOS */
 }
 
 .enlarge {
