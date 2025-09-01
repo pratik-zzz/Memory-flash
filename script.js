@@ -34,7 +34,7 @@ function enlarge(color) {
     btnEl.classList.add("enlarge")
     setTimeout(() => {
         btnEl.classList.remove("enlarge")
-    }, 3000)
+    }, 2000)
 }
 
 function compFlash() {
