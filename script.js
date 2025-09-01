@@ -101,7 +101,7 @@ function levelUp() {
 
 function gameOver() {
     if (navigator.vibrate) {
-        navigator.vibrate = 300
+        navigator.vibrate(300)
     }
     howToBtnEl.style.visibility = "visible"
     if (window.innerWidth <= 900) {
