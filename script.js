@@ -70,9 +70,7 @@ function checkAccuracy(event) {
                     levelUp()
                 }
             } else {
-                if (navigator.vibrate) {
-                    navigator.vibrate(300)
-                }
+                navigator.vibrate(300)
                 let correctColor = compSeq[pressCount]
                 enlarge(correctColor)
                 highScore = score
