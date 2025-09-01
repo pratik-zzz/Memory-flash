@@ -81,13 +81,11 @@ function compFlash() {
         }
     }, compSeq.length * delay)
     compSeq.push(randColor)
-    console.log(`compSeq: ${compSeq}`)
 }
 
 function checkAccuracy(event) {
     let tileEl = event.currentTarget;
     let color = tileEl.id
-    console.log(color)
 	if (!gameStarted) return;
     if (userTurn) {
         btnFlash(color)
