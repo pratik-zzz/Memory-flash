@@ -70,6 +70,9 @@ function checkAccuracy(event) {
                     levelUp()
                 }
             } else {
+                if (navigator.vibrate) {
+                    navigator.vibrate(300)
+                }
                 let correctColor = compSeq[pressCount]
                 enlarge(correctColor)
                 highScore = score
@@ -100,9 +103,6 @@ function levelUp() {
 }
 
 function gameOver() {
-    if (navigator.vibrate) {
-        navigator.vibrate(300)
-    }
     howToBtnEl.style.visibility = "visible"
     if (window.innerWidth <= 900) {
         startBtnEl.style.visibility = "visible"
