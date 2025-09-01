@@ -119,12 +119,12 @@ function levelUp() {
 }
 
 function gameOver() {
+    howToBtnEl.style.visibility = "visible"
     if (window.innerWidth <= 900) {
         startBtnEl.style.visibility = "visible"
     } else {
         pressSpaceEl.textContent = "Game Over! Press the SPACE key to restart game"
         pressSpaceEl.style.visibility = "visible"
-        howToBtnEl.style.visibility = "visible"
     }
 }
 
