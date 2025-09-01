@@ -124,6 +124,7 @@ function gameOver() {
     } else {
         pressSpaceEl.textContent = "Game Over! Press the SPACE key to restart game"
         pressSpaceEl.style.visibility = "visible"
+        howToBtnEl.style.visibility = "visible"
     }
 }
 
@@ -170,6 +171,7 @@ function startGame() {
         gameStarted = true
         pressSpaceEl.style.visibility = "hidden"
         startBtnEl.style.visibility = "hidden"
+        howToBtnEl.style.visibility = "hidden"
 
         pressCount = 0
         score = 0
