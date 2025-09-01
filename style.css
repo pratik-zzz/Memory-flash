@@ -254,8 +254,8 @@ h1 {
 		}
 	
 		.tile {
-			width: clamp(120px, 25vw, 180px);
-			height: clamp(120px, 25vw, 180px);
+			width: clamp(120px, 25vw, 220px);
+			height: clamp(120px, 25vw, 220px);
 			border-radius: 2vw;
 		}
 
