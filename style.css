@@ -204,7 +204,9 @@ h1 {
 	}
 
 	#how-to-btn:hover {
-		scale: 110%;
+		background-color: rgba(255, 255, 255, 0.7);
+		border: none;
+		color: black;
 	}
 
 	#how-to-page {
